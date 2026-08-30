@@ -1,0 +1,6 @@
+{
+  "name": "Master Hotel Website Template",
+  "description": "A production-ready, reusable, data-driven master hotel website template with centralized data architecture, SEO, theme system, and responsive hospitality design.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
