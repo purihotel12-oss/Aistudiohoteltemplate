@@ -12,40 +12,41 @@ export const policiesData: PoliciesData = {
   guestInformation: {
     title: 'Guest Information & Property Guidelines',
     lastUpdated: 'January 2026',
-    introNotice: 'We look forward to welcoming you to The Azure Haven Resort & Spa. Please review our essential arrival guidelines and property amenities below to ensure a seamless stay.',
+    introNotice: 'We look forward to welcoming you to The Samudra Heritage Resort & Spa, Goa. Please review our essential arrival guidelines and property amenities below to ensure a seamless and serene stay.',
     sections: [
       {
         heading: 'Check-In & Check-Out Timings',
         paragraphs: [
-          'Standard check-in begins at 3:00 PM local time. If you anticipate arriving earlier, you are welcome to store your luggage with our concierge team and enjoy full access to our pools, dining venues, and spa facilities.',
-          'Standard check-out is at 11:00 AM. Late check-out requests are subject to availability on the day of departure and may incur additional charges depending on departure time.'
+          'Standard check-in begins at 2:00 PM local time. If you anticipate arriving earlier, you are welcome to store your luggage with our royal concierge team and enjoy full access to our pools, dining venues, and spa facilities.',
+          'Standard check-out is at 11:00 AM. Late check-out requests are subject to room availability on the day of departure and may incur additional charges depending on departure time.'
         ],
         bulletPoints: [
-          'Guaranteed Check-in: 3:00 PM',
+          'Guaranteed Check-in: 2:00 PM',
           'Standard Check-out: 11:00 AM',
-          '24/7 Front Desk & Concierge Operations',
+          '24/7 Front Desk & Royal Concierge Operations',
           'Complimentary luggage storage prior to check-in and post check-out'
         ]
       },
       {
-        heading: 'Identification & Security Deposit Requirements',
+        heading: 'Mandatory Government Identification & Security Deposit',
         paragraphs: [
-          'All adult guests (18 years and older) must present a valid government-issued photographic ID (such as a passport, driver’s license, or national ID card) upon arrival.',
-          'A pre-authorization on an active major credit card is required at check-in to cover room charges and incidental resort services ($150 per night of stay). The hold is released upon departure after room inspection.'
+          'In compliance with Government of India statutory hospitality regulations, all adult Indian citizens must present an original valid government-issued photo ID (Aadhaar Card, Passport, Voter ID, or Driving License; PAN cards are not legally acceptable as identity/address proof) upon arrival.',
+          'Foreign nationals and OCI cardholders must present an original valid Passport and valid Visa / OCI card to complete mandatory Form C registration upon check-in.',
+          'A pre-authorization or security deposit hold of ₹8,000 per night of stay is placed at check-in on an active credit card or via UPI/cash deposit to cover incidental resort services. The hold is released upon departure inspection.'
         ]
       },
       {
         heading: 'Children & Extra Bedding Policies',
         paragraphs: [
           'Children of all ages are warmly welcomed. Children up to 11 years of age stay free of charge when utilizing existing bedding with parents.',
-          'Complimentary baby cots and infant cribs are provided upon request (subject to availability). Rollaway beds for older children or third adults are available in select suite categories for $50 per night.'
+          'Complimentary baby cots and infant cribs are provided upon advance request (subject to availability). Rollaway beds for older children or third adults are available in select suite categories for ₹3,500 per night plus taxes.'
         ]
       },
       {
         heading: 'Quiet Hours & Property Decorum',
         paragraphs: [
           'To preserve the peaceful ambiance of our sanctuary, quiet hours are observed property-wide between 10:00 PM and 07:00 AM. We kindly request all guests to be mindful of sound levels on private balconies and outdoor corridors.',
-          'Smoking and vaping are strictly prohibited inside all guest suites, balconies, and enclosed public areas. Designated open-air smoking areas are available on the resort perimeter.'
+          'Smoking and vaping are strictly prohibited inside all guest suites, balconies, and enclosed public areas. Designated open-air smoking pavilions are available on the resort perimeter.'
         ]
       }
     ]
@@ -54,7 +55,7 @@ export const policiesData: PoliciesData = {
   privacyPolicy: {
     title: 'Privacy Policy',
     lastUpdated: 'January 2026',
-    introNotice: 'The Azure Haven Resort & Spa respects your privacy and is dedicated to protecting your personal information. This Privacy Policy details how we collect, handle, and safeguard your data when you visit our website or interact with our services.',
+    introNotice: 'The Samudra Heritage Resort & Spa respects your privacy and is dedicated to protecting your personal information. This Privacy Policy details how we collect, handle, and safeguard your data when you visit our website or interact with our services.',
     sections: [
       {
         heading: '1. Information We Collect',
@@ -86,7 +87,7 @@ export const policiesData: PoliciesData = {
       {
         heading: '4. Contact for Privacy Inquiries',
         paragraphs: [
-          'If you have questions regarding this Privacy Policy or wish to request data correction or deletion, please contact our Data Protection Officer at info@azurehavenresort.com.'
+          'If you have questions regarding this Privacy Policy or wish to request data correction or deletion, please contact our Data Protection Officer at privacy@samudraheritage.com.'
         ]
       }
     ]
@@ -100,7 +101,7 @@ export const policiesData: PoliciesData = {
       {
         heading: 'Flexible Direct Booking Cancellation',
         paragraphs: [
-          'For standard flexible reservations booked directly through our official channels, full refunds are granted when cancellation is submitted in writing at least 7 days prior to scheduled check-in (3:00 PM resort local time).',
+          'For standard flexible reservations booked directly through our official channels, full refunds are granted when cancellation is submitted in writing at least 7 days prior to scheduled check-in (2:00 PM resort local time).',
           'Cancellations received between 3 and 6 days prior to arrival incur a charge equivalent to 50% of the total booking value. Cancellations within 48 hours of arrival or no-shows incur 100% forfeiture of the reservation deposit.'
         ]
       },
@@ -113,7 +114,7 @@ export const policiesData: PoliciesData = {
       {
         heading: 'Refund Processing Timelines',
         paragraphs: [
-          'Eligible refunds are processed back to the original method of payment within 5 to 10 business days following cancellation approval. International banking transaction fees or currency exchange variances are governed by your issuing bank.'
+          'Eligible refunds are processed back to the original method of payment (UPI, card, or bank transfer) within 5 to 7 business days following cancellation approval. Transaction processing conforms to Reserve Bank of India merchant regulations.'
         ]
       },
       {
@@ -128,32 +129,32 @@ export const policiesData: PoliciesData = {
   termsAndConditions: {
     title: 'Terms & Conditions',
     lastUpdated: 'January 2026',
-    introNotice: 'By accessing this website and booking accommodations at The Azure Haven Resort & Spa, you agree to comply with and be bound by the following terms of service.',
+    introNotice: 'By accessing this website and booking accommodations at The Samudra Heritage Resort & Spa, you agree to comply with and be bound by the following terms of service.',
     sections: [
       {
         heading: '1. Website Usage & Intellectual Property',
         paragraphs: [
-          'All text, visual imagery, logos, architectural photography, and branding displayed on this website are the intellectual property of Azure Haven Hospitality Private Limited and protected by copyright laws.',
+          'All text, visual imagery, logos, architectural photography, and branding displayed on this website are the intellectual property of Samudra Heritage Hospitality India Private Limited and protected by copyright laws.',
           'Unauthorized reproduction, scraping, or commercial exploitation of any site content is strictly prohibited.'
         ]
       },
       {
         heading: '2. Pricing, Rates & Taxes',
         paragraphs: [
-          'All room rates are quoted in US Dollars (USD) unless explicitly stated otherwise. Rates are subject to mandatory state and local hospitality lodging taxes (currently 12%) and a 5% resort service charge covering pool, valet, and wellness access.',
+          'All room rates are quoted in Indian National Rupees (INR / ₹) unless explicitly stated otherwise. Rates are subject to mandatory Government of India Goods and Services Tax (18% GST) and applicable resort service fees.',
           'We reserve the right to correct typographical rate errors prior to booking confirmation.'
         ]
       },
       {
         heading: '3. Guest Responsibility & Property Damage',
         paragraphs: [
-          'Guests are responsible for maintaining reasonable care of their suites and resort facilities. Any intentional damage, loss of property, or excessive cleaning required beyond customary housekeeping will be billed to the guest credit card on file.'
+          'Guests are responsible for maintaining reasonable care of their suites and resort facilities. Any intentional damage, loss of property, or excessive cleaning required beyond customary housekeeping will be billed to the guest account upon checkout.'
         ]
       },
       {
-        heading: '4. Governing Law',
+        heading: '4. Governing Law & Jurisdiction',
         paragraphs: [
-          'These terms and all contractual agreements entered into with the resort shall be governed by and construed in accordance with the laws of the State of California, United States.'
+          'These terms and all contractual agreements entered into with the resort shall be governed by and construed in accordance with the laws of India, under the jurisdiction of the courts of Goa, India.'
         ]
       }
     ]

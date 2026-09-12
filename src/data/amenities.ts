@@ -12,17 +12,17 @@ export const amenitiesData: Amenity[] = [
   // Wellness
   {
     id: 'amenity-01',
-    name: 'Lotus Wellness Spa & Thermal Hydrotherapy',
-    description: 'Six private treatment suites, cedar sauna, steam room, and outdoor mineral vitality baths.',
+    name: 'Lotus Wellness Spa & Ayurvedic Sanctorum',
+    description: 'Six private therapy suites, resident Ayurvedic doctor (Vaidya), traditional Shirodhara, cedar herbal sauna, and mineral vitality baths.',
     category: 'Wellness',
     iconName: 'Sparkles',
     featured: true,
-    availabilityNote: 'Open 08:00 AM – 09:00 PM | Appointments recommended'
+    availabilityNote: 'Open 08:00 AM – 09:00 PM | Consultations by appointment'
   },
   {
     id: 'amenity-02',
-    name: 'Oceanfront Heated Infinity Pool',
-    description: 'Tiered multi-level freshwater infinity pool with submerged sun loungers and cabana service.',
+    name: 'Arabian Sea Vista Heated Infinity Pool',
+    description: 'Tiered multi-level freshwater infinity pool overlooking the ocean with submerged sun loungers and cabana service.',
     category: 'Wellness',
     iconName: 'Waves',
     featured: true,
@@ -30,8 +30,8 @@ export const amenitiesData: Amenity[] = [
   },
   {
     id: 'amenity-03',
-    name: 'State-of-the-Art Fitness Center',
-    description: 'Technogym cardio stations, free weights, Peloton bikes, and dedicated oceanview yoga deck.',
+    name: 'State-of-the-Art Fitness & Yoga Pavilion',
+    description: 'Technogym cardio stations, free weights, and dedicated open-air wooden yoga deck facing the morning sun.',
     category: 'Wellness',
     iconName: 'Dumbbell',
     featured: false,
@@ -41,17 +41,17 @@ export const amenitiesData: Amenity[] = [
   // Dining
   {
     id: 'amenity-04',
-    name: 'The Azure Pavilion Signature Restaurant',
-    description: 'Locally caught coastal seafood, organic produce from our valley gardens, and fine regional wines.',
+    name: 'The Samudra Pavilion Signature Restaurant',
+    description: 'Royal Indian coastal cuisine, authentic Goan Saraswat curries, Tandoor masterworks, fresh catch of the day, and organic garden produce.',
     category: 'Dining',
     iconName: 'Utensils',
     featured: true,
-    availabilityNote: 'Breakfast, Lunch & Dinner | Smart Casual'
+    availabilityNote: 'Breakfast, Lunch & Royal Dinner | Smart Casual'
   },
   {
     id: 'amenity-05',
-    name: 'Sunset Clifftop Lounge & Mixology Bar',
-    description: 'Artisanal cocktails, small plates, and live acoustic sessions overlooking the golden hour horizon.',
+    name: 'Susegad Sunset Clifftop Lounge & Mixology Bar',
+    description: 'Artisanal spice-infused cocktails, Konkan small plates, and soothing sitar & acoustic sessions overlooking the golden hour horizon.',
     category: 'Dining',
     iconName: 'Wine',
     featured: true,

@@ -11,7 +11,7 @@
 
 import { FeatureFlags } from '../types';
 
-export const featureFlags: FeatureFlags = {
+export const DEFAULT_FEATURE_FLAGS: FeatureFlags = {
   rooms: true,
   amenities: true,
   gallery: true,
@@ -30,3 +30,49 @@ export const featureFlags: FeatureFlags = {
   quickAvailabilityBar: true,
   interactiveMap: true
 };
+
+const getStoredFlags = (): FeatureFlags => {
+  if (typeof window === 'undefined') return { ...DEFAULT_FEATURE_FLAGS };
+  try {
+    const saved = localStorage.getItem('hotel_admin_feature_flags');
+    if (saved) {
+      return { ...DEFAULT_FEATURE_FLAGS, ...JSON.parse(saved) };
+    }
+  } catch (e) {
+    console.error('Failed to parse stored feature flags', e);
+  }
+  return { ...DEFAULT_FEATURE_FLAGS };
+};
+
+export const featureFlags: FeatureFlags = getStoredFlags();
+
+export const updateFeatureFlag = (key: keyof FeatureFlags, value: boolean) => {
+  featureFlags[key] = value;
+  try {
+    localStorage.setItem('hotel_admin_feature_flags', JSON.stringify(featureFlags));
+    window.dispatchEvent(new CustomEvent('hotel-config-updated', { detail: { featureFlags } }));
+  } catch (e) {
+    console.error('Failed to save feature flag', e);
+  }
+};
+
+export const updateAllFeatureFlags = (newFlags: FeatureFlags) => {
+  Object.assign(featureFlags, newFlags);
+  try {
+    localStorage.setItem('hotel_admin_feature_flags', JSON.stringify(featureFlags));
+    window.dispatchEvent(new CustomEvent('hotel-config-updated', { detail: { featureFlags } }));
+  } catch (e) {
+    console.error('Failed to save feature flags', e);
+  }
+};
+
+export const resetFeatureFlags = () => {
+  Object.assign(featureFlags, DEFAULT_FEATURE_FLAGS);
+  try {
+    localStorage.removeItem('hotel_admin_feature_flags');
+    window.dispatchEvent(new CustomEvent('hotel-config-updated', { detail: { featureFlags } }));
+  } catch (e) {
+    console.error('Failed to reset feature flags', e);
+  }
+};
+

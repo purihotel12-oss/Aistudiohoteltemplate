@@ -10,26 +10,26 @@ import { SocialLink } from '../types';
 export const socialLinksData: SocialLink[] = [
   {
     platform: 'Instagram',
-    url: 'https://instagram.com/azurehavenresort',
+    url: 'https://instagram.com/samudraheritageresort',
     label: 'Instagram',
-    ariaLabel: 'Follow The Azure Haven Resort on Instagram'
+    ariaLabel: 'Follow The Samudra Heritage Resort on Instagram'
   },
   {
     platform: 'Facebook',
-    url: 'https://facebook.com/azurehavenresort',
+    url: 'https://facebook.com/samudraheritageresort',
     label: 'Facebook',
-    ariaLabel: 'Connect with The Azure Haven Resort on Facebook'
+    ariaLabel: 'Connect with The Samudra Heritage Resort on Facebook'
   },
   {
     platform: 'TripAdvisor',
-    url: 'https://tripadvisor.com/hotel/azurehavenresort',
+    url: 'https://tripadvisor.com/hotel/samudraheritageresort',
     label: 'TripAdvisor',
-    ariaLabel: 'Read reviews of The Azure Haven Resort on TripAdvisor'
+    ariaLabel: 'Read reviews of The Samudra Heritage Resort on TripAdvisor'
   },
   {
     platform: 'YouTube',
-    url: 'https://youtube.com/@azurehavenresort',
+    url: 'https://youtube.com/@samudraheritageresort',
     label: 'YouTube',
-    ariaLabel: 'Watch videos from The Azure Haven Resort on YouTube'
+    ariaLabel: 'Watch videos from The Samudra Heritage Resort on YouTube'
   }
 ];

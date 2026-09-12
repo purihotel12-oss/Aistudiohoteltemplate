@@ -11,7 +11,7 @@ export const galleryData: GalleryItem[] = [
   {
     id: 'gal-01',
     src: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1600&q=80',
-    alt: 'Panoramic aerial view of The Azure Haven Resort infinity pool and oceanfront',
+    alt: 'Panoramic aerial view of The Samudra Heritage Resort infinity pool and Arabian Sea',
     caption: 'Main infinity pool overlooking the coastal horizon at dusk',
     category: 'Exterior',
     featured: true,
@@ -41,8 +41,8 @@ export const galleryData: GalleryItem[] = [
   {
     id: 'gal-04',
     src: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1600&q=80',
-    alt: 'The Azure Pavilion dining terrace set for romantic candlelit dinner',
-    caption: 'Al-fresco coastal dining at The Azure Pavilion Restaurant',
+    alt: 'The Samudra Pavilion dining terrace set for romantic candlelit dinner',
+    caption: 'Al-fresco coastal dining at The Samudra Pavilion Restaurant',
     category: 'Dining',
     featured: true,
     width: 1600,

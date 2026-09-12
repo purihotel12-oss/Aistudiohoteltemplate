@@ -20,7 +20,7 @@ export const roomsData: Room[] = [
       'Perched directly above the shoreline, this marquee suite offers expansive floor-to-ceiling glass doors opening onto an expansive private teak terrace with a heated infinity plunge pool.',
     longDescription: [
       'The Ocean Grand Sanctuary Suite represents the pinnacle of residential coastal living. Featuring bespoke solid oak furnishings, an airy open-concept salon, and hand-woven textiles inspired by tidal patterns.',
-      'The marble bathroom functions as a private day spa, complete with a freestanding soaking tub overlooking the waves, a dual rainforest shower enclosure, and organic botanic bath amenities crafted exclusively for Azure Haven.',
+      'The marble bathroom functions as a private day spa, complete with a freestanding soaking tub overlooking the waves, a dual rainforest shower enclosure, and organic botanic bath amenities crafted exclusively for Samudra Heritage.',
       'Guests enjoy dedicated personal butler service, complimentary sunset aperitifs served on the private deck, and priority reservations across all resort wellness and dining venues.'
     ],
     featuredImage: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80',
@@ -77,14 +77,14 @@ export const roomsData: Room[] = [
       'Walk-in dressing room with personal safe & steamer',
       'Twice-daily housekeeping with bespoke evening turn-down ritual'
     ],
-    startingPrice: 850,
-    currency: '$',
-    priceLabel: 'per night + tax',
-    mealPlanIncluded: 'A la Carte Champagne Breakfast Included',
+    startingPrice: 58000,
+    currency: '₹',
+    priceLabel: 'per night + taxes',
+    mealPlanIncluded: 'A la Carte Champagne & Royal Breakfast Included',
     featured: true,
     enquiryEnabled: true,
     policies: {
-      checkIn: 'Guaranteed check-in at 3:00 PM; early check-in subject to availability.',
+      checkIn: 'Guaranteed check-in at 2:00 PM; early check-in subject to availability.',
       cancellation: 'Complimentary cancellation up to 7 days prior to scheduled arrival.',
       smoking: '100% Non-smoking room and terrace.',
       extraBed: 'One rollaway bed or crib available upon advance request.'
@@ -102,15 +102,15 @@ export const roomsData: Room[] = [
   },
   {
     id: 'room-02',
-    slug: 'azure-coastal-deluxe-villa',
-    name: 'Azure Coastal Deluxe Villa',
+    slug: 'samudra-coastal-deluxe-villa',
+    name: 'Samudra Coastal Deluxe Villa',
     shortName: 'Coastal Deluxe Villa',
     category: 'Villa',
     tagline: 'Secluded beachfront haven surrounded by indigenous flora with private courtyard',
     description:
       'Set within a private landscaped courtyard steps from the beach, the Coastal Deluxe Villa balances generous indoor elegance with an outdoor rain shower and sunlit verandah.',
     longDescription: [
-      'The Azure Coastal Deluxe Villa offers unmatched privacy for couples seeking an intimate getaway. Designed with vaulted cedar ceilings, whitewashed stone, and polished terrazzo flooring.',
+      'The Samudra Coastal Deluxe Villa offers unmatched privacy for couples seeking an intimate getaway. Designed with vaulted cedar ceilings, whitewashed stone, and polished terrazzo flooring.',
       'Step directly from your bedroom through sliding pocket doors into a secluded sun courtyard equipped with plush daybeds, tropical garden foliage, and an open-sky rain shower.',
       'Evenings invite stargazing from your private patio while listening to the gentle rhythm of the surf.'
     ],
@@ -118,7 +118,7 @@ export const roomsData: Room[] = [
     images: [
       {
         src: 'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80',
-        alt: 'Azure Coastal Deluxe Villa Bedroom Interior',
+        alt: 'Samudra Coastal Deluxe Villa Bedroom Interior',
         caption: 'Airy bedroom with vaulted cedar ceiling and garden patio access'
       },
       {
@@ -159,14 +159,14 @@ export const roomsData: Room[] = [
       'Complimentary beach cruiser bicycles during stay',
       'Nightly botanical sleep mist and pillow service'
     ],
-    startingPrice: 620,
-    currency: '$',
-    priceLabel: 'per night + tax',
-    mealPlanIncluded: 'Gourmet Organic Breakfast Included',
+    startingPrice: 38000,
+    currency: '₹',
+    priceLabel: 'per night + taxes',
+    mealPlanIncluded: 'Gourmet Organic & Coastal Breakfast Included',
     featured: true,
     enquiryEnabled: true,
     policies: {
-      checkIn: '3:00 PM Check-in',
+      checkIn: '2:00 PM Check-in',
       cancellation: 'Free cancellation up to 5 days prior to arrival.',
       smoking: 'Non-smoking.'
     }
@@ -222,9 +222,9 @@ export const roomsData: Room[] = [
       'Integrated USB-C bedside charging ports & digital safe',
       'Individual climate control with quiet eco-mode'
     ],
-    startingPrice: 480,
-    currency: '$',
-    priceLabel: 'per night + tax',
+    startingPrice: 22500,
+    currency: '₹',
+    priceLabel: 'per night + taxes',
     mealPlanIncluded: 'Buffet Breakfast Included',
     featured: true,
     enquiryEnabled: true
@@ -280,10 +280,10 @@ export const roomsData: Room[] = [
       'Complimentary baby cots and high chairs upon request',
       'Separate entrance doors for each room with connecting foyer'
     ],
-    startingPrice: 720,
-    currency: '$',
-    priceLabel: 'per night + tax',
-    mealPlanIncluded: 'Family Buffet Breakfast Included',
+    startingPrice: 52000,
+    currency: '₹',
+    priceLabel: 'per night + taxes',
+    mealPlanIncluded: 'Family Royal Buffet Breakfast Included',
     featured: false,
     enquiryEnabled: true
   }

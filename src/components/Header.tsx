@@ -45,9 +45,10 @@ export const Header: React.FC<HeaderProps> = ({ currentPath, onNavigate, onOpenB
       id="main-site-header"
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-[#0F1115]/85 backdrop-blur-xl shadow-lg border-b border-white/10 py-3.5 text-white'
-          : 'bg-gradient-to-b from-black/80 via-[#0F1115]/60 to-transparent backdrop-blur-[2px] py-4 text-white'
+          ? 'shadow-lg border-b border-white/10 py-3.5 text-white backdrop-blur-xl'
+          : 'bg-gradient-to-b from-black/80 via-black/40 to-transparent backdrop-blur-[2px] py-4 text-white'
       }`}
+      style={isScrolled ? { backgroundColor: 'var(--theme-bg, #0F1115)' } : undefined}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
@@ -162,7 +163,8 @@ export const Header: React.FC<HeaderProps> = ({ currentPath, onNavigate, onOpenB
       {mobileMenuOpen && (
         <div
           id="mobile-navigation-drawer"
-          className="lg:hidden fixed inset-x-0 top-full bg-[#0F1115]/95 backdrop-blur-2xl text-white border-b border-white/10 shadow-2xl max-h-[85vh] overflow-y-auto px-6 py-6 animate-fadeIn"
+          className="lg:hidden fixed inset-x-0 top-full backdrop-blur-2xl text-white border-b border-white/10 shadow-2xl max-h-[85vh] overflow-y-auto px-6 py-6 animate-fadeIn"
+          style={{ backgroundColor: 'var(--theme-bg, #0F1115)' }}
         >
           <div className="flex flex-col space-y-3">
             {navItems.map((item) => {

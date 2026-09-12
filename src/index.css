@@ -1,15 +1,43 @@
 @import "tailwindcss";
 
+@theme {
+  --color-amber-300: var(--theme-secondary-light, #FCD34D);
+  --color-amber-400: var(--theme-secondary, #F59E0B);
+  --color-amber-500: var(--theme-secondary-hover, #D97706);
+  --color-amber-600: var(--theme-secondary-hover, #D97706);
+  --font-serif: var(--theme-font-heading, "Cormorant Garamond", Georgia, serif);
+  --font-sans: var(--theme-font-body, "Plus Jakarta Sans", system-ui, sans-serif);
+}
+
 @layer base {
+  :root {
+    --theme-bg: #0F1115;
+    --theme-primary: #0F1115;
+    --theme-primary-hover: #161920;
+    --theme-secondary: #F59E0B;
+    --theme-secondary-hover: #D97706;
+    --theme-secondary-light: #FCD34D;
+    --theme-accent: #2563EB;
+    --theme-surface: rgba(255, 255, 255, 0.05);
+    --theme-surface-alt: rgba(255, 255, 255, 0.08);
+    --theme-text-main: #F9FAFB;
+    --theme-text-muted: #9CA3AF;
+    --theme-border: rgba(255, 255, 255, 0.10);
+    --theme-dark-surface: #0B0D11;
+    --theme-font-heading: 'Cormorant Garamond', Georgia, serif;
+    --theme-font-body: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+
   body {
-    background-color: #0F1115;
-    color: #F9FAFB;
-    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: var(--theme-bg, #0F1115);
+    color: var(--theme-text-main, #F9FAFB);
+    font-family: var(--theme-font-body);
     scroll-behavior: smooth;
+    transition: background-color 0.4s ease, color 0.4s ease;
   }
 
   h1, h2, h3, h4, .font-serif {
-    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-family: var(--theme-font-heading);
     letter-spacing: -0.01em;
   }
 
@@ -19,10 +47,10 @@
     height: 8px;
   }
   ::-webkit-scrollbar-track {
-    background: #0F1115;
+    background: var(--theme-bg, #0F1115);
   }
   ::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.15);
+    background: var(--theme-border, rgba(255, 255, 255, 0.15));
     border-radius: 9999px;
   }
   ::-webkit-scrollbar-thumb:hover {
@@ -32,60 +60,65 @@
 
 /* Glassmorphism Utilities */
 .glass-panel {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--theme-surface, rgba(255, 255, 255, 0.05));
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--theme-border, rgba(255, 255, 255, 0.1));
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  transition: all 0.3s ease;
 }
 
 .glass-panel-subtle {
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--theme-surface-alt, rgba(255, 255, 255, 0.03));
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--theme-border, rgba(255, 255, 255, 0.08));
+  transition: all 0.3s ease;
 }
 
 .glass-card {
-  background: rgba(255, 255, 255, 0.04);
+  background: var(--theme-surface, rgba(255, 255, 255, 0.04));
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--theme-border, rgba(255, 255, 255, 0.1));
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .glass-card:hover {
-  background: rgba(255, 255, 255, 0.07);
-  border-color: rgba(255, 255, 255, 0.18);
+  background: var(--theme-surface-alt, rgba(255, 255, 255, 0.07));
+  border-color: var(--theme-secondary, rgba(255, 255, 255, 0.18));
   transform: translateY(-2px);
   box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.45);
 }
 
 .glass-pill {
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: var(--theme-surface, rgba(255, 255, 255, 0.06));
+  border: 1px solid var(--theme-border, rgba(255, 255, 255, 0.12));
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
 }
 
 .glass-input {
-  background: rgba(255, 255, 255, 0.05) !important;
+  background: var(--theme-surface, rgba(255, 255, 255, 0.05)) !important;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.12) !important;
-  color: #F9FAFB !important;
+  border: 1px solid var(--theme-border, rgba(255, 255, 255, 0.12)) !important;
+  color: var(--theme-text-main, #F9FAFB) !important;
+  transition: all 0.2s ease;
 }
 
 .glass-input:focus {
-  border-color: rgba(245, 158, 11, 0.6) !important;
+  border-color: var(--theme-secondary, rgba(245, 158, 11, 0.6)) !important;
   box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.2) !important;
 }
 
 .glass-modal {
-  background: rgba(15, 17, 21, 0.88);
+  background: var(--theme-bg, #0F1115);
   backdrop-filter: blur(28px);
   -webkit-backdrop-filter: blur(28px);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid var(--theme-border, rgba(255, 255, 255, 0.12));
+  transition: background-color 0.4s ease, border-color 0.4s ease;
 }
 
 @keyframes fadeIn {

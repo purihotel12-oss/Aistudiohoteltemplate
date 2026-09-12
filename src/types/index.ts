@@ -9,11 +9,13 @@ export interface ContactConfig {
   phonePrimary: string;
   phoneSecondary?: string;
   phoneDisplay?: string;
+  phoneTollFree?: string;
   whatsappNumber: string;
   whatsappDefaultMessage?: string;
   emailReservations: string;
   emailEnquiry: string;
   emailGeneral?: string;
+  emailConcierge?: string;
   receptionHours?: string;
   conciergeHours?: string;
 }

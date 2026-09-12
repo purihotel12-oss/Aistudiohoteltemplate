@@ -6,8 +6,8 @@ export function cn(...classes: (string | boolean | undefined | null)[]): string 
   return classes.filter(Boolean).join(' ');
 }
 
-export function formatCurrency(amount: number, currency: string = '$'): string {
-  return `${currency}${amount.toLocaleString()}`;
+export function formatCurrency(amount: number, currency: string = '₹'): string {
+  return `${currency}${amount.toLocaleString('en-IN')}`;
 }
 
 export function formatDate(dateString: string): string {

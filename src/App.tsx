@@ -3,7 +3,7 @@ import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { FloatingWhatsApp } from './components/FloatingWhatsApp';
 import { BookingModal, BookingModalInitialParams } from './components/BookingModal';
-import { TemplateCustomizerDrawer } from './components/TemplateCustomizerDrawer';
+import { applyThemeToDom, themeConfig } from './data/theme';
 
 // Pages
 import { HomePage } from './pages/HomePage';
@@ -20,6 +20,7 @@ import { ContactPage } from './pages/ContactPage';
 import { GuestInfoPage } from './pages/GuestInfoPage';
 import { OffersPage } from './pages/OffersPage';
 import { PolicyPage } from './pages/PolicyPage';
+import { AdminPage } from './pages/AdminPage';
 import { NotFoundPage } from './pages/NotFoundPage';
 
 export function App() {
@@ -29,6 +30,7 @@ export function App() {
 
   const [bookingModalOpen, setBookingModalOpen] = useState(false);
   const [bookingModalParams, setBookingModalParams] = useState<BookingModalInitialParams>({});
+  const [configVersion, setConfigVersion] = useState(0);
 
   // Synchronize browser history navigation (back/forward)
   useEffect(() => {
@@ -38,6 +40,18 @@ export function App() {
 
     window.addEventListener('popstate', handlePopState);
     return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
+
+  // Listen for global configuration updates (feature flags or theme changes)
+  useEffect(() => {
+    applyThemeToDom(themeConfig);
+    const handleConfigChange = () => {
+      applyThemeToDom(themeConfig);
+      setConfigVersion(v => v + 1);
+    };
+
+    window.addEventListener('hotel-config-updated', handleConfigChange);
+    return () => window.removeEventListener('hotel-config-updated', handleConfigChange);
   }, []);
 
   // Listen for global booking inquiry events from helper dispatchers
@@ -72,68 +86,73 @@ export function App() {
       return <HomePage onNavigate={navigate} onOpenBookingModal={handleOpenBookingModal} />;
     }
 
-    // 2. Room Detail: /rooms/:slug
+    // 2. Admin Panel (/admin or /admin/login)
+    if (currentPath === '/admin' || currentPath === '/admin/login') {
+      return <AdminPage onNavigate={navigate} onOpenBookingModal={handleOpenBookingModal} />;
+    }
+
+    // 3. Room Detail: /rooms/:slug
     if (currentPath.startsWith('/rooms/')) {
       const slug = currentPath.replace('/rooms/', '').split('?')[0].split('#')[0];
       return <RoomDetailPage slug={slug} onNavigate={navigate} onOpenBookingModal={handleOpenBookingModal} />;
     }
 
-    // 3. Rooms Listing: /rooms
+    // 4. Rooms Listing: /rooms
     if (currentPath === '/rooms') {
       return <RoomsPage onNavigate={navigate} onOpenBookingModal={handleOpenBookingModal} />;
     }
 
-    // 4. About: /about
+    // 5. About: /about
     if (currentPath === '/about') {
       return <AboutPage onNavigate={navigate} onOpenBookingModal={() => handleOpenBookingModal()} />;
     }
 
-    // 5. Amenities: /amenities
+    // 6. Amenities: /amenities
     if (currentPath === '/amenities') {
       return <AmenitiesPage onNavigate={navigate} onOpenBookingModal={() => handleOpenBookingModal()} />;
     }
 
-    // 6. Gallery: /gallery
+    // 7. Gallery: /gallery
     if (currentPath === '/gallery') {
       return <GalleryPage onNavigate={navigate} />;
     }
 
-    // 7. Experiences: /experiences
+    // 8. Experiences: /experiences
     if (currentPath === '/experiences') {
       return <ExperiencesPage onNavigate={navigate} onOpenBookingModal={handleOpenBookingModal} />;
     }
 
-    // 8. Location & Arrival: /location
+    // 9. Location & Arrival: /location
     if (currentPath === '/location') {
       return <LocationPage onNavigate={navigate} />;
     }
 
-    // 9. FAQs: /faq
+    // 10. FAQs: /faq
     if (currentPath === '/faq') {
       return <FAQPage onNavigate={navigate} />;
     }
 
-    // 10. Reviews: /reviews
+    // 11. Reviews: /reviews
     if (currentPath === '/reviews') {
       return <ReviewsPage onNavigate={navigate} onOpenBookingModal={() => handleOpenBookingModal()} />;
     }
 
-    // 11. Contact: /contact
+    // 12. Contact: /contact
     if (currentPath === '/contact') {
       return <ContactPage onNavigate={navigate} />;
     }
 
-    // 12. Guest Information: /guest-information
+    // 13. Guest Information: /guest-information
     if (currentPath === '/guest-information') {
       return <GuestInfoPage onNavigate={navigate} onOpenBookingModal={() => handleOpenBookingModal()} />;
     }
 
-    // 13. Offers: /offers
+    // 14. Offers: /offers
     if (currentPath === '/offers') {
       return <OffersPage onNavigate={navigate} onOpenBookingModal={handleOpenBookingModal} />;
     }
 
-    // 14. Legal & Policies
+    // 15. Legal & Policies
     if (currentPath === '/privacy-policy') {
       return <PolicyPage type="privacy" onNavigate={navigate} />;
     }
@@ -147,39 +166,55 @@ export function App() {
       return <PolicyPage type="cookies" onNavigate={navigate} />;
     }
 
-    // 15. Default 404
+    // 16. Default 404
     return <NotFoundPage onNavigate={navigate} />;
   };
 
   return (
-    <div className="min-h-screen bg-[#0F1115] text-[#F9FAFB] flex flex-col font-sans selection:bg-amber-500/30 selection:text-amber-200 relative overflow-x-hidden">
-      {/* Frosted Glass Ambient Atmospheric Orbs */}
+    <div
+      className="min-h-screen flex flex-col font-sans selection:bg-amber-500/30 selection:text-amber-200 relative overflow-x-hidden transition-colors duration-500"
+      style={{
+        backgroundColor: 'var(--theme-bg, #0F1115)',
+        color: 'var(--theme-text-main, #F9FAFB)'
+      }}
+    >
+      {/* Dynamic Ambient Atmospheric Orbs */}
       <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden" aria-hidden="true">
-        {/* Top-Left Royal Blue Glow Orb */}
-        <div className="absolute top-[-10%] left-[-10%] w-[50vw] h-[50vw] max-w-[650px] max-h-[650px] bg-[#2563EB] rounded-full blur-[160px] opacity-20" />
-        {/* Bottom-Right Warm Amber Glow Orb */}
-        <div className="absolute bottom-[-10%] right-[-10%] w-[50vw] h-[50vw] max-w-[650px] max-h-[650px] bg-[#D97706] rounded-full blur-[160px] opacity-15" />
-        {/* Center-Left Indigo Ambient Glow */}
-        <div className="absolute top-[45%] left-[20%] w-[35vw] h-[35vw] max-w-[450px] max-h-[450px] bg-[#4F46E5] rounded-full blur-[180px] opacity-10" />
+        {/* Primary Ambient Accent Orb */}
+        <div
+          className="absolute top-[-10%] left-[-10%] w-[50vw] h-[50vw] max-w-[650px] max-h-[650px] rounded-full blur-[160px] opacity-25 transition-all duration-700"
+          style={{ backgroundColor: 'var(--theme-accent, #2563EB)' }}
+        />
+        {/* Secondary Warm / Accent Orb */}
+        <div
+          className="absolute bottom-[-10%] right-[-10%] w-[50vw] h-[50vw] max-w-[650px] max-h-[650px] rounded-full blur-[160px] opacity-20 transition-all duration-700"
+          style={{ backgroundColor: 'var(--theme-secondary, #D97706)' }}
+        />
+        {/* Center Atmospheric Glow */}
+        <div
+          className="absolute top-[45%] left-[20%] w-[35vw] h-[35vw] max-w-[450px] max-h-[450px] rounded-full blur-[180px] opacity-15 transition-all duration-700"
+          style={{ backgroundColor: 'var(--theme-accent, #4F46E5)' }}
+        />
       </div>
 
       {/* Site Header */}
       <Header
+        key={`header-${configVersion}`}
         currentPath={currentPath}
         onNavigate={navigate}
         onOpenBooking={() => handleOpenBookingModal()}
       />
 
       {/* Main Page Body */}
-      <main className="flex-1 relative z-10">
+      <main key={`page-${configVersion}`} className="flex-1 relative z-10">
         {renderCurrentPage()}
       </main>
 
       {/* Site Footer */}
-      <Footer onNavigate={navigate} />
+      <Footer key={`footer-${configVersion}`} onNavigate={navigate} />
 
       {/* Floating Concierge Action */}
-      <FloatingWhatsApp />
+      <FloatingWhatsApp key={`whatsapp-${configVersion}`} />
 
       {/* Booking / Reservation Modal */}
       <BookingModal
@@ -187,9 +222,6 @@ export function App() {
         onClose={() => setBookingModalOpen(false)}
         initialParams={bookingModalParams}
       />
-
-      {/* Master Template Inspector & AI Customizer Hub */}
-      <TemplateCustomizerDrawer onNavigate={navigate} />
     </div>
   );
 }

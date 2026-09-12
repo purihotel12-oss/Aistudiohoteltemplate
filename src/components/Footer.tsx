@@ -2,7 +2,7 @@ import React from 'react';
 import { hotelData } from '../data/hotel';
 import { featureFlags } from '../data/features';
 import { socialLinksData } from '../data/social';
-import { Phone, Mail, MapPin, MessageCircle, ShieldCheck, ChevronRight, ArrowUpRight } from 'lucide-react';
+import { Phone, Mail, MapPin, MessageCircle, ShieldCheck, ChevronRight, ArrowUpRight, Lock } from 'lucide-react';
 import { buildWhatsAppUrl } from '../lib/whatsapp';
 
 interface FooterProps {
@@ -19,7 +19,11 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
   };
 
   return (
-    <footer id="main-site-footer" className="bg-[#0F1115]/90 backdrop-blur-2xl text-white/70 pt-16 pb-12 border-t border-white/10 relative z-10">
+    <footer
+      id="main-site-footer"
+      className="backdrop-blur-2xl text-white/70 pt-16 pb-12 border-t border-white/10 relative z-10"
+      style={{ backgroundColor: 'var(--theme-bg, #0F1115)' }}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Top Section: Hotel Identity & Quick Connect */}
@@ -297,6 +301,16 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               className="hover:text-white/80"
             >
               Terms of Stay
+            </a>
+            <span>•</span>
+            <a
+              href="/admin"
+              onClick={(e) => handleLinkClick(e, '/admin')}
+              className="hover:text-amber-400 text-white/40 flex items-center gap-1 transition-colors"
+              title="Hotel Staff & Administrator Portal"
+            >
+              <Lock className="w-2.5 h-2.5 text-amber-400/70" />
+              <span>Staff Admin</span>
             </a>
           </div>
         </div>

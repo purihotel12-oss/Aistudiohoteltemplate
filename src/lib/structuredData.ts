@@ -28,7 +28,7 @@ export function getHotelJsonLd() {
     image: hotelData.primaryImage,
     telephone: hotelData.contact.phonePrimary,
     email: hotelData.contact.emailReservations,
-    priceRange: seoConfig.organizationSchema.priceRange || '$$$$',
+    priceRange: seoConfig.organizationSchema.priceRange || '₹₹₹₹',
     starRating: hotelData.starRating
       ? {
           '@type': 'Rating',
@@ -142,7 +142,7 @@ export function getRoomJsonLd(room: Room) {
       ? {
           '@type': 'Offer',
           price: room.startingPrice,
-          priceCurrency: 'USD',
+          priceCurrency: 'INR',
           availability: 'https://schema.org/InStock',
           url: getPageCanonicalUrl(`/rooms/${room.slug}`)
         }

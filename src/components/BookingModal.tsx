@@ -3,6 +3,7 @@ import { hotelData } from '../data/hotel';
 import { roomsData } from '../data/rooms';
 import { X, Calendar, Users, Phone, Mail, CheckCircle2, MessageCircle, ArrowRight } from 'lucide-react';
 import { getRoomEnquiryWhatsAppUrl, buildWhatsAppUrl } from '../lib/whatsapp';
+import { formatCurrency } from '../lib/utils';
 
 export interface BookingModalInitialParams {
   checkIn?: string;
@@ -186,7 +187,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose, ini
                     <option value="" className="bg-[#1A1E26] text-white">Best Available Suite</option>
                     {roomsData.map((r) => (
                       <option key={r.id} value={r.slug} className="bg-[#1A1E26] text-white">
-                        {r.name} ({r.currency}{r.startingPrice}/night)
+                        {r.name} ({formatCurrency(r.startingPrice, r.currency)}/night)
                       </option>
                     ))}
                   </select>

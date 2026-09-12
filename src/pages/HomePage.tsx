@@ -101,7 +101,10 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenBookingMod
                 loading="lazy"
                 referrerPolicy="no-referrer"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0F1115]/60 via-transparent to-transparent" />
+              <div
+                className="absolute inset-0 opacity-60"
+                style={{ background: 'linear-gradient(to top, var(--theme-bg, #0F1115), transparent)' }}
+              />
             </div>
             
             {/* Floating Experience Badge */}

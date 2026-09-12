@@ -24,10 +24,16 @@ export const RoomCard: React.FC<RoomCardProps> = ({ room, onExplore, onBook }) =
           loading="lazy"
           referrerPolicy="no-referrer"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0F1115] via-transparent to-transparent opacity-80" />
+        <div
+          className="absolute inset-0 opacity-80"
+          style={{ background: 'linear-gradient(to top, var(--theme-bg, #0F1115), transparent)' }}
+        />
         
         {/* Category Badge */}
-        <div className="absolute top-3 left-3 bg-[#0F1115]/80 backdrop-blur-md border border-white/15 text-amber-400 text-[10px] uppercase tracking-wider font-semibold px-3 py-1 rounded-full">
+        <div
+          className="absolute top-3 left-3 backdrop-blur-md border border-white/15 text-amber-400 text-[10px] uppercase tracking-wider font-semibold px-3 py-1 rounded-full"
+          style={{ backgroundColor: 'var(--theme-bg, #0F1115)' }}
+        >
           {room.category}
         </div>
 

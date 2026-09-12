@@ -11,59 +11,59 @@ export const blogData: BlogPost[] = [
   {
     id: 'post-01',
     slug: 'essential-guide-coastal-haven-hidden-coves',
-    title: 'The Insider’s Guide to Coastal Haven’s Secret Sea Coves & Coastal Trails',
-    excerpt: 'Discover secluded tide pools, ancient maritime lookouts, and peaceful walking trails known only to locals.',
+    title: 'The Insider’s Guide to South Goa’s Secret Sea Coves & Coastal Heritage Trails',
+    excerpt: 'Discover secluded lagoons, ancient maritime lookouts, and peaceful coconut grove walking trails.',
     content: `
-      Coastal Haven is celebrated for its dramatic meeting of azure waters and rugged headlands. While the resort beach offers pristine relaxation, the surrounding coastline harbors secret treasures for those eager to explore.
+      South Goa is celebrated for its pristine meeting of turquoise Arabian waters and swaying emerald palms. While our private beach offers pure relaxation, the surrounding coastline harbors secret treasures for those eager to explore.
 
-      ### 1. Point Serenity Clifftop Trail
-      Beginning just beyond our south pavilion, this gentle 2-mile walking trail traverses protected coastal sage scrub before ascending to a breathtaking panoramic vantage point. In the early morning, pods of Pacific bottlenose dolphins can frequently be spotted playing in the surf below.
+      ### 1. Cabo de Rama Clifftop Trail
+      Beginning just a short distance from our south pavilion, this gentle walking trail traverses coastal headlands before ascending to breathtaking panoramic fort ramparts. In the early morning, pods of playful Indian Ocean humpback dolphins can frequently be spotted in the calm sea below.
 
-      ### 2. Pelican Cove Tide Pools
-      During low tide, Pelican Cove transforms into a living marine aquarium. Natural basalt basins trap crystal-clear ocean water, revealing vibrant ochre sea stars, purple sea urchins, and translucent anemones. We recommend wearing sturdy reef shoes or picking up a naturalist kit from our concierge desk.
+      ### 2. Betul Estuary & Hidden Tide Lagoons
+      During low tide, the secluded coves near the estuary transform into serene tide pools. Crystal-clear water reveals vibrant marine life, gentle hermit crabs, and undisturbed golden sands. We recommend wearing comfortable walking footwear or taking an escorted morning trail with our resident naturalist.
 
-      ### 3. Sunset at Fisherman's Bluff
-      For photography enthusiasts, Fisherman’s Bluff offers an unobstructed view of the golden hour sun dipping below the ocean horizon. Pack one of our chef's gourmet picnic baskets and savor a glass of chilled local sauvignon blanc as the evening twilight paints the sea.
+      ### 3. Sunset at Mobor Fisherman's Point
+      For photography enthusiasts, Mobor Point offers an unobstructed view of the golden hour sun dipping below the Arabian Sea. Pack one of our chef's royal picnic hampers and savor fresh tender coconut water or fine Indian vintage wine as evening twilight paints the sky in saffron and indigo.
     `,
     featuredImage: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80',
     author: {
-      name: 'Julian Vance',
+      name: 'Rohan Fernandes',
       role: 'Head Concierge & Resident Naturalist'
     },
     publishedDate: '2026-02-15',
     readTime: '4 min read',
     category: 'Local Destination Guide',
-    tags: ['Destination', 'Nature', 'Photography', 'Coastal Trails'],
-    seoTitle: 'Secret Sea Coves & Coastal Trails of Havenport | Azure Haven Resort',
-    seoDescription: 'Explore the most scenic secluded beaches, tide pools, and clifftop trails around Havenport with our resident naturalist guide.'
+    tags: ['Destination', 'Nature', 'Photography', 'Coastal Trails', 'Goa'],
+    seoTitle: 'Secret Sea Coves & Coastal Trails of South Goa | Samudra Heritage Resort',
+    seoDescription: 'Explore the most scenic secluded beaches, lagoons, and clifftop trails around South Goa with our resident naturalist guide.'
   },
   {
     id: 'post-02',
     slug: 'art-of-slow-hospitality-wellness-rituals',
-    title: 'The Art of Slow Hospitality: Restoring Rhythm Through Holistic Wellness',
-    excerpt: 'How mindful architecture, restorative sleep rituals, and botanical nutrition harmonize body and mind.',
+    title: 'The Art of Susegad: Restoring Natural Rhythm Through Ayurvedic Wellness',
+    excerpt: 'How mindful Goan heritage architecture, restorative sleep rituals, and Ayurvedic nutrition harmonize body and soul.',
     content: `
-      In an increasingly hurried world, true luxury is the freedom of unhurried time. At Azure Haven, every sensory detail is designed to encourage deceleration.
+      In an increasingly hurried world, true luxury is the freedom of unhurried time — what the Goan ethos affectionately calls "Susegad". At Samudra Heritage, every sensory detail is designed to encourage peaceful deceleration.
 
       ### Designing for Natural Circadian Rhythm
-      Our guest suites utilize architectural orientation to welcome soft, natural morning light while motorized linen sheers filter mid-day glare. In the evening, warm 2700K ambient illumination and acoustic soundproofing allow the nervous system to ease naturally into restorative deep sleep.
+      Our heritage suites utilize traditional Portuguese-Goan veranda architecture to welcome soft, natural sea breezes and morning light. In the evening, warm ambient brass lamps and natural terracotta acoustic insulation allow the nervous system to ease into restorative sleep to the murmur of waves.
 
-      ### Farm-to-Table Botanical Nutrition
-      Our culinary team collaborates with four local bio-dynamic family farms to curate menus that celebrate seasonality. From crisp heirloom greens harvested at sunrise to wild coastal sea greens rich in essential minerals, every dish is an invitation to nourish.
+      ### Satvik & Coastal Botanical Nutrition
+      Our culinary masters curate seasonal menus celebrating authentic regional herbs, freshly cold-pressed coconut oil, heirloom red rice, and organic spices harvested directly from our estate gardens. Every dish is an invitation to nourish vital prana.
 
-      ### Hydrotherapy & Thermal Contrast
-      The Lotus Spa embraces centuries-old thermal hydrotherapy traditions. Alternating between the eucalyptus cedar sauna and our mineral cold plunge enhances circulation, boosts immunity, and promotes deep muscular release.
+      ### Authentic Ayurvedic Therapies & Herbal Steam
+      The Lotus Spa embraces time-honored Ayurvedic wisdom. Personalized consultations with our resident Vaidya (Ayurvedic physician), traditional warm herbal oil Abhyanga, and fragrant cedarwood steam baths promote profound muscular rejuvenation and inner calm.
     `,
     featuredImage: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=80',
     author: {
-      name: 'Elena Rostova',
-      role: 'Director of Holistic Wellness'
+      name: 'Dr. Meera Nambiar',
+      role: 'Director of Ayurvedic & Holistic Wellness'
     },
     publishedDate: '2026-01-28',
     readTime: '5 min read',
     category: 'Wellness & Lifestyle',
-    tags: ['Wellness', 'Spa', 'Nutrition', 'Quiet Luxury'],
-    seoTitle: 'The Art of Slow Hospitality & Restorative Wellness | Azure Haven',
-    seoDescription: 'Discover our philosophy of restorative slow travel, Ayurvedic therapies, and botanical dining at The Azure Haven Resort.'
+    tags: ['Ayurveda', 'Spa', 'Nutrition', 'Quiet Luxury', 'Goa'],
+    seoTitle: 'The Art of Susegad & Restorative Ayurvedic Wellness | Samudra Heritage',
+    seoDescription: 'Discover our philosophy of restorative slow travel, traditional Ayurvedic therapies, and organic royal dining at The Samudra Heritage Resort & Spa.'
   }
 ];

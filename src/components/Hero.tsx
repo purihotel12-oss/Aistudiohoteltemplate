@@ -22,7 +22,12 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking, onExploreRooms }) => 
           loading="eager"
           referrerPolicy="no-referrer"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0F1115] via-[#0F1115]/80 to-[#0F1115]/50" />
+        <div
+          className="absolute inset-0 opacity-90 transition-all duration-700"
+          style={{
+            background: 'linear-gradient(to top, var(--theme-bg, #0F1115) 0%, rgba(0,0,0,0.7) 65%, rgba(0,0,0,0.45) 100%)'
+          }}
+        />
       </div>
 
       {/* Hero Content Container */}
